@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+:root {
+    --bg: #222;
+    --white: #f0f0f9;
+    --green: hsl(98 100% 62%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, button, input {
+    font-family: 'Fira Code', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    color: var(--white);
+}
+
+header {
+    margin-top: 3.2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    color: var(--white);
+    animation: up 0.4s;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header p {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+main {
+    margin: 0 auto;
+    width: min(80vw, 500px);
+
+    animation: up 0.4s 0.2s backwards;
+}
+
+button {
+  display: block;
+  outline:none ;
+  width: 100%;
+  padding: .8rem 1.6rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border: none;
+  border-radius: 0.4rem;
+  background: var(--white);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+button:hover {
+    transform: translate(1px, 1px);
+}
+
+button + button {
+    margin-top: .8rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#photo-file, #crop-image , #download {
+    display: none;
+}
+
+#photo-preview{
+    margin: .8rem 0;
+}
+
+#selection-tool {
+    display: none;
+    position: fixed;
+    border: 2px dashed var(--green);
+}
