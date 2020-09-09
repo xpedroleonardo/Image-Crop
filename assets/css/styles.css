@@ -46,11 +46,6 @@ header h1 {
     font-size: 60px;
 }
 
-header p {
-    font-size: 20px;
-    font-family: monospace;
-}
-
 main {
     margin: 0 auto;
     width: min(80vw, 500px);
